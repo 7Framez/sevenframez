@@ -1,12 +1,24 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useState } from 'react';
+import { Header } from '@/components/Header';
+import { HeroSection } from '@/components/HeroSection';
+import { ServicesSection } from '@/components/ServicesSection';
+import { ShowreelSection } from '@/components/ShowreelSection';
+import { ContactForm } from '@/components/ContactForm';
 
 const Index = () => {
+  const [isContactOpen, setIsContactOpen] = useState(false);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <Header onContactClick={() => setIsContactOpen(true)} />
+      <HeroSection onContactClick={() => setIsContactOpen(true)} />
+      <ServicesSection />
+      <ShowreelSection />
+      
+      <ContactForm 
+        isOpen={isContactOpen} 
+        onClose={() => setIsContactOpen(false)} 
+      />
     </div>
   );
 };
