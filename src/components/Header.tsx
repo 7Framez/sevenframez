@@ -23,10 +23,11 @@ export const Header = ({ onContactClick }: HeaderProps) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            {/* Logo placeholder - replace with actual logo */}
-            <div className="w-12 h-8 bg-primary rounded flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-sm">7F</span>
-            </div>
+            <img 
+              src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
+              alt="7 Framez Logo"
+              className="h-8 w-auto"
+            />
           </div>
 
           {/* Desktop Navigation */}
