@@ -42,7 +42,7 @@ Message:
 ${formData.message}
       `;
       
-      const mailtoLink = `mailto:ibrahim@7framez.com?subject=New Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
+      const mailtoLink = `mailto:info@7framez.com?subject=New Contact Form Submission&body=${encodeURIComponent(emailBody)}`;
       
       // Open default email client
       window.location.href = mailtoLink;
@@ -103,15 +103,22 @@ ${formData.message}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 p-4 bg-muted/20 rounded-lg">
             <div className="flex items-center space-x-2">
               <Mail className="text-primary" size={16} />
-              <span className="text-sm text-muted-foreground">ibrahim@7framez.com</span>
+              <span className="text-sm text-muted-foreground">info@7framez.com</span>
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="text-primary" size={16} />
-              <span className="text-sm text-muted-foreground">+1 (555) 123-4567</span>
+              <span className="text-sm text-muted-foreground">+966 591918986</span>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="text-primary" size={16} />
-              <span className="text-sm text-muted-foreground">Studio Location</span>
+              <a 
+                href="https://maps.app.goo.gl/tD73u41VxkLwoB8z7" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                Studio Location
+              </a>
             </div>
           </div>
 

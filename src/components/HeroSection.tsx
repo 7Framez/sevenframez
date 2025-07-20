@@ -15,13 +15,13 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
       </div>
 
       <div className="container mx-auto px-4 text-center relative z-10">
-        {/* Main Logo Placeholder */}
+        {/* Main Logo */}
         <div className="mb-8 animate-fade-in">
-          <div className="inline-flex items-center justify-center w-32 h-32 bg-card border border-primary rounded-lg shadow-glow mb-6">
-            <Camera size={48} className="text-primary" />
-          </div>
-          <div className="text-4xl md:text-6xl font-bold text-foreground mb-2">
-            7 FRAMEZ
+          <div className="inline-flex items-center justify-center w-48 h-32 bg-card border border-primary rounded-lg shadow-glow mb-6">
+            {/* Logo 2 placeholder - replace with actual logo */}
+            <div className="w-32 h-16 bg-primary rounded flex items-center justify-center">
+              <span className="text-primary-foreground font-bold text-xl">7</span>
+            </div>
           </div>
         </div>
 
@@ -33,23 +33,24 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
           </h1>
         </div>
 
-        {/* 7 Frames Visual */}
+        {/* 7 Frames Auto-Slideable Carousel */}
         <div className="mb-12 animate-fade-in delay-500">
-          <div className="relative inline-block">
-            {/* Multiple overlapping frames */}
-            {[...Array(7)].map((_, i) => (
-              <div
-                key={i}
-                className="absolute inset-0 border-2 border-primary rounded-lg"
-                style={{
-                  transform: `rotate(${i * 5}deg) scale(${1 + i * 0.05})`,
-                  opacity: 0.7 - i * 0.08,
-                  animation: `float ${3 + i * 0.5}s ease-in-out infinite ${i * 0.2}s`
-                }}
-              />
-            ))}
-            <div className="w-48 h-32 md:w-64 md:h-40 bg-card/20 rounded-lg border-2 border-primary flex items-center justify-center backdrop-blur-sm">
-              <span className="text-primary font-bold text-lg">FRAMES</span>
+          <div className="relative w-48 h-32 md:w-64 md:h-40 mx-auto overflow-hidden rounded-lg border-2 border-primary">
+            {/* Carousel container */}
+            <div className="relative w-full h-full">
+              {[...Array(7)].map((_, i) => (
+                <div
+                  key={i}
+                  className="absolute inset-0 bg-card/20 backdrop-blur-sm flex items-center justify-center transition-all duration-1000 ease-in-out"
+                  style={{
+                    transform: `translateX(${(i - 0) * 100}%)`,
+                    animation: `slideFrames ${7 * 2}s infinite ${i * 2}s`
+                  }}
+                >
+                  <span className="text-primary font-bold text-lg">FRAME {i + 1}</span>
+                  {/* Placeholder for future images */}
+                </div>
+              ))}
             </div>
           </div>
         </div>

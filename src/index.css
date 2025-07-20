@@ -16,10 +16,10 @@
     --popover: 220 20% 10%;
     --popover-foreground: 210 20% 98%;
 
-    /* Electric blue primary - signature color */
-    --primary: 210 100% 56%;
+    /* 7 Framez red/orange primary - signature color */
+    --primary: 14 100% 57%;
     --primary-foreground: 220 20% 8%;
-    --primary-glow: 210 100% 70%;
+    --primary-glow: 14 100% 70%;
 
     /* Professional secondary tones */
     --secondary: 220 15% 15%;
@@ -28,7 +28,7 @@
     --muted: 220 15% 12%;
     --muted-foreground: 215 15% 65%;
 
-    --accent: 45 100% 65%;
+    --accent: 20 100% 60%;
     --accent-foreground: 220 20% 8%;
 
     --destructive: 0 84% 60%;
@@ -39,19 +39,30 @@
     --ring: 210 100% 56%;
 
     /* Cinematic gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(210 100% 56%), hsl(210 100% 70%));
+    --gradient-primary: linear-gradient(135deg, hsl(14 100% 57%), hsl(14 100% 70%));
     --gradient-dark: linear-gradient(180deg, hsl(220 20% 8%), hsl(220 20% 12%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 20% 8%) 0%, hsl(220 15% 12%) 50%, hsl(210 100% 56% / 0.1) 100%);
+    --gradient-hero: linear-gradient(135deg, hsl(220 20% 8%) 0%, hsl(220 15% 12%) 50%, hsl(14 100% 57% / 0.1) 100%);
     
     /* Video production shadows */
-    --shadow-cinematic: 0 25px 50px -12px hsl(210 100% 56% / 0.25);
+    --shadow-cinematic: 0 25px 50px -12px hsl(14 100% 57% / 0.25);
     --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 40px hsl(210 100% 70% / 0.3);
+    --shadow-glow: 0 0 40px hsl(14 100% 70% / 0.3);
 
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+}
 
+/* Keyframes for frame carousel */
+@keyframes slideFrames {
+  0%, 14.28% { transform: translateX(0%); opacity: 1; }
+  14.29%, 85.71% { transform: translateX(-700%); opacity: 0; }
+  85.72%, 100% { transform: translateX(0%); opacity: 1; }
+}
+
+@layer base {
+  :root {
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
