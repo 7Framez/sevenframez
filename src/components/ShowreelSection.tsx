@@ -81,12 +81,6 @@ export const ShowreelSection = () => {
           ))}
         </div>
 
-        {/* CTA */}
-        <div className="text-center mt-12">
-          <Button variant="outline-glow" size="lg">
-            View Full Portfolio
-          </Button>
-        </div>
       </div>
     </section>
   );

@@ -6,47 +6,47 @@
 
 @layer base {
   :root {
-    /* Core cinematic color palette */
-    --background: 220 20% 8%;
-    --foreground: 210 20% 98%;
+    /* 7 Framez Brand Colors: Black, White, Electric Red */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
 
-    --card: 220 20% 10%;
-    --card-foreground: 210 20% 98%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
 
-    --popover: 220 20% 10%;
-    --popover-foreground: 210 20% 98%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
 
-    /* 7 Framez red/orange primary - signature color */
-    --primary: 14 100% 57%;
-    --primary-foreground: 220 20% 8%;
-    --primary-glow: 14 100% 70%;
+    /* Electric Red Primary - #ff3000 */
+    --primary: 11 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 11 100% 60%;
 
     /* Professional secondary tones */
-    --secondary: 220 15% 15%;
-    --secondary-foreground: 210 20% 98%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 220 15% 12%;
-    --muted-foreground: 215 15% 65%;
+    --muted: 0 0% 8%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 20 100% 60%;
-    --accent-foreground: 220 20% 8%;
+    --accent: 11 100% 50%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 20% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 220 15% 20%;
-    --input: 220 15% 15%;
-    --ring: 210 100% 56%;
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 11 100% 50%;
 
-    /* Cinematic gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(14 100% 57%), hsl(14 100% 70%));
-    --gradient-dark: linear-gradient(180deg, hsl(220 20% 8%), hsl(220 20% 12%));
-    --gradient-hero: linear-gradient(135deg, hsl(220 20% 8%) 0%, hsl(220 15% 12%) 50%, hsl(14 100% 57% / 0.1) 100%);
+    /* Cinematic gradients with electric red */
+    --gradient-primary: linear-gradient(135deg, hsl(11 100% 50%), hsl(11 100% 60%));
+    --gradient-dark: linear-gradient(180deg, hsl(0 0% 0%), hsl(0 0% 5%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 5%) 50%, hsl(11 100% 50% / 0.1) 100%);
     
-    /* Video production shadows */
-    --shadow-cinematic: 0 25px 50px -12px hsl(14 100% 57% / 0.25);
+    /* Video production shadows with electric red */
+    --shadow-cinematic: 0 25px 50px -12px hsl(11 100% 50% / 0.25);
     --shadow-elegant: 0 10px 30px -10px hsl(0 0% 0% / 0.3);
-    --shadow-glow: 0 0 40px hsl(14 100% 70% / 0.3);
+    --shadow-glow: 0 0 40px hsl(11 100% 60% / 0.3);
 
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -54,11 +54,22 @@
   }
 }
 
-/* Keyframes for frame carousel */
+/* Keyframes for frame carousel - slide animation */
 @keyframes slideFrames {
-  0%, 14.28% { transform: translateX(0%); opacity: 1; }
-  14.29%, 85.71% { transform: translateX(-700%); opacity: 0; }
-  85.72%, 100% { transform: translateX(0%); opacity: 1; }
+  0% { transform: translateX(100%); opacity: 0; }
+  10% { transform: translateX(0%); opacity: 1; }
+  90% { transform: translateX(0%); opacity: 1; }
+  100% { transform: translateX(-100%); opacity: 0; }
+}
+
+@keyframes slideFramesContainer {
+  0%, 14.28% { transform: translateX(0%); }
+  14.29%, 28.57% { transform: translateX(-14.28%); }
+  28.58%, 42.85% { transform: translateX(-28.57%); }
+  42.86%, 57.14% { transform: translateX(-42.85%); }
+  57.15%, 71.42% { transform: translateX(-57.14%); }
+  71.43%, 85.71% { transform: translateX(-71.42%); }
+  85.72%, 100% { transform: translateX(-85.71%); }
 }
 
 @layer base {
