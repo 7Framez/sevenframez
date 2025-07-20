@@ -65,7 +65,7 @@ export const ShowreelSection = () => {
 
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
-          {[1, 2, 3, 4, 5, 6].map((item) => (
+          {[1, 2, 3].map((item) => (
             <div 
               key={item}
               className="aspect-video bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"

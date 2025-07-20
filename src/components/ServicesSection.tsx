@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Video, Camera, Users, Mic } from 'lucide-react';
+import { Video, Camera, Users, Target } from 'lucide-react';
 
 export const ServicesSection = () => {
   const services = [
@@ -22,10 +22,16 @@ export const ServicesSection = () => {
       features: ["Studio Lighting", "Green Screen", "Equipment Rental", "Flexible Booking"]
     },
     {
-      icon: Mic,
-      title: "Audio Production",
-      description: "Professional audio recording, mixing, and mastering services. Voiceovers, podcasts, and music production.",
-      features: ["Recording", "Mixing", "Mastering", "Voiceover Work"]
+      icon: Users,
+      title: "Cyclorama",
+      description: "Professional cyclorama studio with seamless curved walls perfect for photography and video production.",
+      features: ["Seamless Background", "Professional Lighting", "White/Colored Backdrops", "360° Shooting"]
+    },
+    {
+      icon: Target,
+      title: "Marketing",
+      description: "Digital marketing services to promote your content and reach your target audience effectively.",
+      features: ["Social Media Marketing", "Content Strategy", "Brand Development", "Campaign Management"]
     }
   ];
 
@@ -42,7 +48,7 @@ export const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (

@@ -19,7 +19,7 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         <div className="mb-8 animate-fade-in">
           <div className="flex justify-center">
             <img 
-              src="/lovable-uploads/6935d358-aeee-4dfb-8e66-a04484a83f2d.png" 
+              src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
               alt="7 Framez Logo"
               className="h-32 md:h-48 w-auto filter drop-shadow-glow"
             />

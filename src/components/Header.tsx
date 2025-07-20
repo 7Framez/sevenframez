@@ -44,6 +44,18 @@ export const Header = ({ onContactClick }: HeaderProps) => {
             >
               Our Work
             </button>
+            <button 
+              onClick={() => scrollToSection('gallery')}
+              className="text-foreground hover:text-primary transition-colors duration-300"
+            >
+              Gallery
+            </button>
+            <button 
+              onClick={() => scrollToSection('space')}
+              className="text-foreground hover:text-primary transition-colors duration-300"
+            >
+              The Space
+            </button>
             <Button 
               variant="cinematic" 
               onClick={onContactClick}
@@ -77,6 +89,18 @@ export const Header = ({ onContactClick }: HeaderProps) => {
                 className="text-foreground hover:text-primary transition-colors duration-300 text-left"
               >
                 Our Work
+              </button>
+              <button 
+                onClick={() => scrollToSection('gallery')}
+                className="text-foreground hover:text-primary transition-colors duration-300 text-left"
+              >
+                Gallery
+              </button>
+              <button 
+                onClick={() => scrollToSection('space')}
+                className="text-foreground hover:text-primary transition-colors duration-300 text-left"
+              >
+                The Space
               </button>
               <Button 
                 variant="cinematic" 

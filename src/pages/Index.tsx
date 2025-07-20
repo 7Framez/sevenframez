@@ -3,6 +3,8 @@ import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { ServicesSection } from '@/components/ServicesSection';
 import { ShowreelSection } from '@/components/ShowreelSection';
+import { GallerySection } from '@/components/GallerySection';
+import { TheSpaceSection } from '@/components/TheSpaceSection';
 import { ContactForm } from '@/components/ContactForm';
 
 const Index = () => {
@@ -14,6 +16,8 @@ const Index = () => {
       <HeroSection onContactClick={() => setIsContactOpen(true)} />
       <ServicesSection />
       <ShowreelSection />
+      <GallerySection />
+      <TheSpaceSection />
       
       <ContactForm 
         isOpen={isContactOpen} 
