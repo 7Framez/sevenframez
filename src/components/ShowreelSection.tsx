@@ -46,21 +46,6 @@ export const ShowreelSection = () => {
             */}
           </div>
 
-          {/* Video Stats/Info */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">100+</div>
-              <div className="text-muted-foreground">Projects Completed</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">50+</div>
-              <div className="text-muted-foreground">Happy Clients</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-primary mb-2">5</div>
-              <div className="text-muted-foreground">Years Experience</div>
-            </div>
-          </div>
         </div>
 
         {/* Portfolio Grid */}

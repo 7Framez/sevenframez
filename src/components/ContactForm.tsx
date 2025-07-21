@@ -103,7 +103,12 @@ ${formData.message}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 p-4 bg-muted/20 rounded-lg">
             <div className="flex items-center space-x-2">
               <Mail className="text-primary" size={16} />
-              <span className="text-sm text-muted-foreground">info@7framez.com</span>
+              <a 
+                href="mailto:info@7framez.com"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors"
+              >
+                info@7framez.com
+              </a>
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="text-primary" size={16} />
