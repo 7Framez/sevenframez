@@ -69,7 +69,7 @@ export const Header = ({ onContactClick }: HeaderProps) => {
             >
               The Space
             </button> */}
-            <LanguageSwitch />
+            {/* <LanguageSwitch /> */}
             <Button 
               variant="cinematic" 
               onClick={onContactClick}
