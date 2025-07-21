@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 
@@ -8,6 +8,15 @@ interface HeaderProps {
 
 export const Header = ({ onContactClick }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const logoOpacity = Math.min(scrollY / 300, 1);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -26,7 +35,8 @@ export const Header = ({ onContactClick }: HeaderProps) => {
             <img 
               src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
               alt="7 Framez Logo"
-              className="h-8 w-auto"
+              className="h-8 w-auto transition-opacity duration-300"
+              style={{ opacity: logoOpacity }}
             />
           </div>
 

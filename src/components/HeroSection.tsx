@@ -17,7 +17,7 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
       <div className="container mx-auto px-4 text-center relative z-10">
         {/* Main Logo */}
         <div className="mb-8 animate-fade-in">
-          <div className="flex justify-center">
+          <div className="flex justify-center p-8">
             <img 
               src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
               alt="7 Framez Logo"
@@ -34,23 +34,6 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
           </h1>
         </div>
 
-        {/* 7 Frames Auto-Slideable Carousel */}
-        <div className="mb-12 animate-fade-in delay-500">
-          <div className="relative overflow-hidden h-20 max-w-4xl mx-auto">
-            <div className="flex gap-4 animate-[slideFramesContainer_21s_infinite_linear]">
-              {[1, 2, 3, 4, 5, 6, 7].map((num) => (
-                <div
-                  key={num}
-                  className="min-w-[140px] h-16 bg-card/30 border-2 border-primary/40 rounded-lg flex items-center justify-center text-foreground font-bold text-sm relative overflow-hidden group backdrop-blur-sm transition-all duration-500"
-                >
-                  <div className="absolute inset-0 bg-gradient-primary opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
-                  <span className="relative z-10 font-orbitron">FRAME {num}</span>
-                  <div className="absolute inset-0 border border-primary/60 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-glow"></div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
 
         {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in delay-700">
