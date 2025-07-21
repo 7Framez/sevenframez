@@ -19,13 +19,7 @@ export const ServicesSection = () => {
       icon: Users,
       title: "Creative Space Rental",
       description: "Modern, fully-equipped studio space available for rent. Perfect for content creators, photographers, and video producers.",
-      features: ["Studio Lighting", "Green Screen", "Equipment Rental", "Flexible Booking"]
-    },
-    {
-      icon: Users,
-      title: "Cyclorama",
-      description: "Professional cyclorama studio with seamless curved walls perfect for photography and video production.",
-      features: ["Seamless Background", "Professional Lighting", "White/Colored Backdrops", "360° Shooting"]
+      features: ["Studio Lighting", "Green Screen", "Equipment Rental", "Cyclorama"]
     },
     {
       icon: Target,
@@ -48,7 +42,7 @@ export const ServicesSection = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
