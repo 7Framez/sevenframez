@@ -112,7 +112,14 @@ ${formData.message}
             </div>
             <div className="flex items-center space-x-2">
               <Phone className="text-primary" size={16} />
-              <span className="text-sm text-muted-foreground">+966 591918986</span>
+              <a 
+                href="https://wa.me/966591918986"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+              >
+                +966 591918986
+              </a>
             </div>
             <div className="flex items-center space-x-2">
               <MapPin className="text-primary" size={16} />

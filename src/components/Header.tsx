@@ -1,12 +1,15 @@
 import { useState, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
+import { LanguageSwitch } from '@/components/LanguageSwitch';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface HeaderProps {
   onContactClick: () => void;
 }
 
 export const Header = ({ onContactClick }: HeaderProps) => {
+  const { t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
 
@@ -46,13 +49,13 @@ export const Header = ({ onContactClick }: HeaderProps) => {
               onClick={() => scrollToSection('services')}
               className="text-foreground hover:text-primary transition-colors duration-300"
             >
-              Services
+              {t('nav.services')}
             </button>
             <button 
               onClick={() => scrollToSection('showreel')}
               className="text-foreground hover:text-primary transition-colors duration-300"
             >
-              Our Work
+              {t('nav.showreel')}
             </button>
             {/* <button 
               onClick={() => scrollToSection('gallery')}
@@ -66,12 +69,13 @@ export const Header = ({ onContactClick }: HeaderProps) => {
             >
               The Space
             </button> */}
+            <LanguageSwitch />
             <Button 
               variant="cinematic" 
               onClick={onContactClick}
               className="ml-4"
             >
-              Contact Us
+              {t('nav.contact')}
             </Button>
           </nav>
 
@@ -92,13 +96,13 @@ export const Header = ({ onContactClick }: HeaderProps) => {
                 onClick={() => scrollToSection('services')}
                 className="text-foreground hover:text-primary transition-colors duration-300 text-left"
               >
-                Services
+                {t('nav.services')}
               </button>
               <button 
                 onClick={() => scrollToSection('showreel')}
                 className="text-foreground hover:text-primary transition-colors duration-300 text-left"
               >
-                Our Work
+                {t('nav.showreel')}
               </button>
               {/* <button 
                 onClick={() => scrollToSection('gallery')}
@@ -112,12 +116,13 @@ export const Header = ({ onContactClick }: HeaderProps) => {
               >
                 The Space
               </button> */}
+              <LanguageSwitch />
               <Button 
                 variant="cinematic" 
                 onClick={onContactClick}
                 className="w-full"
               >
-                Contact Us
+                {t('nav.contact')}
               </Button>
             </div>
           </nav>

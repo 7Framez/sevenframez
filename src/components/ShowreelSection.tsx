@@ -19,7 +19,7 @@ export const ShowreelSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative aspect-video bg-card rounded-lg overflow-hidden shadow-cinematic">
             <iframe
-              src="https://www.youtube.com/embed/kQXxoJqaTT8"
+              src="https://www.youtube.com/embed/kQXxoJqaTT8?rel=0&modestbranding=1&showinfo=0"
               title="7 Framez Showreel"
               className="w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
