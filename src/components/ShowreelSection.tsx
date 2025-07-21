@@ -18,32 +18,13 @@ export const ShowreelSection = () => {
         {/* Video Player Container */}
         <div className="max-w-4xl mx-auto">
           <div className="relative aspect-video bg-card rounded-lg overflow-hidden shadow-cinematic">
-            {/* Placeholder for video - will be replaced when video is added */}
-            <div className="absolute inset-0 bg-gradient-hero flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-6 backdrop-blur-sm border border-primary">
-                  <Play className="text-primary ml-1" size={36} />
-                </div>
-                <h3 className="text-2xl font-bold text-foreground mb-2">
-                  Showreel Coming Soon
-                </h3>
-                <p className="text-muted-foreground">
-                  Upload your video to the assets folder and we'll integrate it here
-                </p>
-              </div>
-            </div>
-
-            {/* Video will be inserted here when available */}
-            {/* 
-            <video 
-              controls 
-              className="w-full h-full object-cover"
-              poster="/path-to-poster-image"
-            >
-              <source src="/path-to-video" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video> 
-            */}
+            <iframe
+              src="https://www.youtube.com/embed/kQXxoJqaTT8"
+              title="7 Framez Showreel"
+              className="w-full h-full"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            />
           </div>
 
         </div>
