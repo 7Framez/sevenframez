@@ -41,9 +41,13 @@ export const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <h3 className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              7 Framez
-            </h3>
+            <div className="flex items-center">
+              <img 
+                src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
+                alt="7 Framez Logo"
+                className="h-8 w-auto"
+              />
+            </div>
             <p className="text-muted-foreground">
               Professional video production, photography, and creative space rental services in Riyadh, Saudi Arabia.
             </p>
@@ -51,7 +55,7 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-foreground">Contact</h4>
+            <h4 className="text-lg font-semibold text-foreground">Contact Us</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-primary" />

@@ -17,7 +17,7 @@ const translations = {
     'nav.showreel': 'Our Work',
     'nav.gallery': 'Gallery',
     'nav.space': 'The Space',
-    'nav.contact': 'Contact',
+    'nav.contact': 'Contact Us',
     
     // Hero Section
     'hero.title': 'Where Every Frame Counts',
