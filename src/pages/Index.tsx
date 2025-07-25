@@ -6,6 +6,7 @@ import { ShowreelSection } from '@/components/ShowreelSection';
 {/* import { GallerySection } from '@/components/GallerySection';
 import { TheSpaceSection } from '@/components/TheSpaceSection'; */}
 import { ContactForm } from '@/components/ContactForm';
+import { Footer } from '@/components/Footer';
 
 const Index = () => {
   const [isContactOpen, setIsContactOpen] = useState(false);
@@ -18,6 +19,8 @@ const Index = () => {
       <ShowreelSection />
       {/* <GallerySection />
       <TheSpaceSection /> */}
+      
+      <Footer />
       
       <ContactForm 
         isOpen={isContactOpen} 
