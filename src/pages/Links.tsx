@@ -70,17 +70,16 @@ const Links = () => {
       <div className="w-full max-w-md space-y-8">
         {/* Logo/Header */}
         <div className="text-center space-y-4">
-          <div className="w-24 h-24 mx-auto bg-gradient-primary rounded-full flex items-center justify-center mb-4">
-            <span className="text-2xl font-bold text-primary-foreground">7F</span>
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
+              alt="7 Framez Logo"
+              className="h-16 w-auto"
+            />
           </div>
-          <div>
-            <h1 className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
-              7 Framez
-            </h1>
-            <p className="text-muted-foreground mt-2">
-              Professional Video Production & Creative Studio
-            </p>
-          </div>
+          <p className="text-muted-foreground">
+            Professional Video Production & Creative Studio
+          </p>
         </div>
 
         {/* Social Media Icons */}
