@@ -100,7 +100,7 @@ export const ServicesSection = () => {
                   <ul className="space-y-2">
                     {service.features.map((featureKey, featureIndex) => (
                       <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
-                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 ml-0 flex-shrink-0 rtl:mr-0 rtl:ml-3"></div>
                         {t(featureKey)}
                       </li>
                     ))}
