@@ -5,7 +5,7 @@ export type Language = 'en' | 'ar';
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: string) => string;
+  t: (key: string, params?: Record<string, any>) => string;
   isLoading: boolean;
 }
 
@@ -43,8 +43,16 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     loadTranslations();
   }, [language]);
 
-  const t = (key: string): string => {
-    return translations[key] || key;
+  const t = (key: string, params?: Record<string, any>): string => {
+    let translation = translations[key] || key;
+    
+    if (params) {
+      Object.entries(params).forEach(([key, value]) => {
+        translation = translation.replace(new RegExp(`{{${key}}}`, 'g'), String(value));
+      });
+    }
+    
+    return translation;
   };
 
   // Set document direction based on language
