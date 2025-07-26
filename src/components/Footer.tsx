@@ -51,7 +51,7 @@ export const Footer = () => {
               />
             </div>
             <p className="text-muted-foreground">
-              Professional video production, photography, and creative space rental services in Riyadh, Saudi Arabia.
+              {t('footer.description')}
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export const Footer = () => {
           <div className="space-y-4">
             <h4 className="text-lg font-semibold text-foreground">{t('nav.contact')}</h4>
             <div className="space-y-3">
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <Mail size={16} className="text-primary" />
                 <a 
                   href="mailto:info@7framez.com"
@@ -68,7 +68,7 @@ export const Footer = () => {
                   info@7framez.com
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <Phone size={16} className="text-primary" />
                 <a 
                   href="https://wa.me/966591918986"
@@ -79,7 +79,7 @@ export const Footer = () => {
                   +966 591918986
                 </a>
               </div>
-              <div className="flex items-center space-x-3">
+              <div className="flex items-center space-x-3 rtl:space-x-reverse">
                 <MapPin size={16} className="text-primary" />
                 <a 
                   href="https://maps.app.goo.gl/j4yyYeZUtCQ64ikc7?g_st=ipc"
@@ -95,8 +95,8 @@ export const Footer = () => {
 
           {/* Social Media */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-foreground">Follow Us</h4>
-            <div className="flex space-x-4">
+            <h4 className="text-lg font-semibold text-foreground">{t('footer.followUs')}</h4>
+            <div className="flex space-x-4 rtl:space-x-reverse">
               {socialLinks.map((social) => {
                 const IconComponent = social.icon;
                 return (
@@ -114,7 +114,7 @@ export const Footer = () => {
               })}
             </div>
             <p className="text-sm text-muted-foreground">
-              Stay updated with our latest work and behind-the-scenes content.
+              {t('footer.stayUpdated')}
             </p>
           </div>
         </div>
@@ -122,7 +122,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} 7 Framez. All rights reserved.
+            © {new Date().getFullYear()} 7 Framez. {t('footer.copyright')}
           </p>
         </div>
       </div>

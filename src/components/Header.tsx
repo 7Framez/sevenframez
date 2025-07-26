@@ -44,7 +44,7 @@ export const Header = ({ onContactClick }: HeaderProps) => {
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
+          <nav className="hidden md:flex items-center space-x-6 rtl:space-x-reverse">
             <button 
               onClick={() => scrollToSection('services')}
               className="text-foreground hover:text-primary transition-colors duration-300"
@@ -73,7 +73,7 @@ export const Header = ({ onContactClick }: HeaderProps) => {
             <Button 
               variant="cinematic" 
               onClick={onContactClick}
-              className="ml-4"
+              className="ml-4 rtl:ml-0 rtl:mr-4"
             >
               {t('nav.contact')}
             </Button>

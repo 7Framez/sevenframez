@@ -47,5 +47,9 @@
   "contact.sending": "Sending...",
   "contact.success": "Message Sent!",
   "contact.success-desc": "Your default email client will open with the message. Thank you for contacting us!",
-  "contact.location": "Studio Location"
+  "contact.location": "Studio Location",
+  "footer.description": "Professional video production, photography, and creative space rental services in Riyadh, Saudi Arabia.",
+  "footer.followUs": "Follow Us",
+  "footer.stayUpdated": "Stay updated with our latest work and behind-the-scenes content.",
+  "footer.copyright": "All rights reserved."
 }
