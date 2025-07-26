@@ -3,7 +3,19 @@ import { Video, Camera, Users, Target } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const DetailedServicesSection = () => {
-  const { t } = useLanguage();
+  const { t, isLoading } = useLanguage();
+  
+  if (isLoading) {
+    return (
+      <section className="py-20 bg-background">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">Loading...</h2>
+          </div>
+        </div>
+      </section>
+    );
+  }
   
   const services = [
     {
