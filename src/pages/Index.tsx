@@ -2,7 +2,6 @@ import { useState } from 'react';
 import { Header } from '@/components/Header';
 import { HeroSection } from '@/components/HeroSection';
 import { ServicesSection } from '@/components/ServicesSection';
-import { DetailedServicesSection } from '@/components/DetailedServicesSection';
 import { ShowreelSection } from '@/components/ShowreelSection';
 {/* import { GallerySection } from '@/components/GallerySection';
 import { TheSpaceSection } from '@/components/TheSpaceSection'; */}
@@ -17,7 +16,6 @@ const Index = () => {
       <Header onContactClick={() => setIsContactOpen(true)} />
       <HeroSection onContactClick={() => setIsContactOpen(true)} />
       <ServicesSection />
-      <DetailedServicesSection />
       <ShowreelSection />
       {/* <GallerySection />
       <TheSpaceSection /> */}

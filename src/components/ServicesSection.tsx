@@ -3,30 +3,69 @@ import { Video, Camera, Users, Target } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
 export const ServicesSection = () => {
-  const { t } = useLanguage();
+  const { t, isLoading } = useLanguage();
   
   const services = [
     {
       icon: Video,
       titleKey: "services.video.title",
-      descriptionKey: "services.video.desc"
+      descriptionKey: "services.video.desc",
+      features: [
+        "services.video.concept",
+        "services.video.filming", 
+        "services.video.postProduction",
+        "services.video.colorGrading"
+      ]
     },
     {
       icon: Camera,
       titleKey: "services.photo.title",
-      descriptionKey: "services.photo.desc"
+      descriptionKey: "services.photo.desc",
+      features: [
+        "services.photo.product",
+        "services.photo.event",
+        "services.photo.portraits",
+        "services.photo.commercial"
+      ]
     },
     {
       icon: Users,
-      titleKey: "services.space.title",
-      descriptionKey: "services.space.desc"
+      titleKey: "services.space.title", 
+      descriptionKey: "services.space.desc",
+      features: [
+        "services.space.lighting",
+        "services.space.greenScreen",
+        "services.space.equipment",
+        "services.space.cyclorama"
+      ]
     },
     {
       icon: Target,
-      titleKey: "services.audio.title",
-      descriptionKey: "services.audio.desc"
+      titleKey: "services.marketing.title",
+      descriptionKey: "services.marketing.desc", 
+      features: [
+        "services.marketing.social",
+        "services.marketing.strategy",
+        "services.marketing.branding",
+        "services.marketing.campaigns"
+      ]
     }
   ];
+
+  if (isLoading) {
+    return (
+      <section id="services" className="py-20 bg-gradient-dark">
+        <div className="container mx-auto px-4">
+          <div className="text-center">
+            <div className="animate-pulse">
+              <div className="h-12 bg-muted rounded mb-4 max-w-md mx-auto"></div>
+              <div className="h-6 bg-muted rounded max-w-2xl mx-auto"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section id="services" className="py-20 bg-gradient-dark">
@@ -55,9 +94,17 @@ export const ServicesSection = () => {
                   <CardTitle className="text-foreground">{t(service.titleKey)}</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-muted-foreground">
+                  <CardDescription className="text-muted-foreground mb-4">
                     {t(service.descriptionKey)}
                   </CardDescription>
+                  <ul className="space-y-2">
+                    {service.features.map((featureKey, featureIndex) => (
+                      <li key={featureIndex} className="flex items-center text-sm text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
+                        {t(featureKey)}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             );
