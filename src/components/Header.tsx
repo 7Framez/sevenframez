@@ -69,14 +69,15 @@ export const Header = ({ onContactClick }: HeaderProps) => {
             >
               The Space
             </button> */}
-            <LanguageSwitch />
-            <Button 
-              variant="cinematic" 
-              onClick={onContactClick}
-              className="ml-4 rtl:ml-0 rtl:mr-4"
-            >
-              {t('nav.contact')}
-            </Button>
+            <div className="!ml-auto rtl:!mr-auto rtl:!ml-0 flex items-center space-x-4 rtl:space-x-reverse">
+              <LanguageSwitch />
+              <Button 
+                variant="cinematic" 
+                onClick={onContactClick}
+              >
+                {t('nav.contact')}
+              </Button>
+            </div>
           </nav>
 
           {/* Mobile Menu Button */}
