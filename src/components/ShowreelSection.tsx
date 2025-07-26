@@ -1,17 +1,19 @@
 import { Button } from '@/components/ui/button';
 import { Play, Eye } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const ShowreelSection = () => {
+  const { t } = useLanguage();
+  
   return (
     <section id="showreel" className="py-20 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Our Work
+            {t('showreel.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover the power of visual storytelling through our portfolio of 
-            exceptional video productions and creative projects.
+            {t('showreel.subtitle')}
           </p>
         </div>
 
@@ -19,7 +21,7 @@ export const ShowreelSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="relative aspect-video bg-card rounded-lg overflow-hidden shadow-cinematic">
             <iframe
-              src="https://www.youtube.com/embed/kQXxoJqaTT8?rel=0&modestbranding=1&showinfo=0"
+              src="https://www.youtube.com/embed/kQXxoJqaTT8?rel=0&modestbranding=1&showinfo=0&end_screen=0"
               title="7 Framez Showreel"
               className="w-full h-full"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
