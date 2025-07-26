@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Label } from '@/components/ui/label';
 import { X, Send, Mail, Phone, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface ContactFormProps {
   isOpen: boolean;
@@ -14,6 +15,7 @@ interface ContactFormProps {
 
 export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
   const { toast } = useToast();
+  const { t } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -48,8 +50,8 @@ ${formData.message}
       window.location.href = mailtoLink;
 
       toast({
-        title: "Message Sent!",
-        description: "Your default email client will open with the message. Thank you for contacting us!",
+        title: t('contact.success'),
+        description: t('contact.success-desc'),
       });
 
       // Reset form
@@ -92,9 +94,9 @@ ${formData.message}
           >
             <X size={24} />
           </button>
-          <CardTitle className="text-2xl text-foreground">Get In Touch</CardTitle>
+          <CardTitle className="text-2xl text-foreground">{t('contact.title')}</CardTitle>
           <CardDescription className="text-muted-foreground">
-            Ready to bring your vision to life? Let's discuss your project and see how we can help.
+            {t('contact.subtitle')}
           </CardDescription>
         </CardHeader>
 
@@ -129,7 +131,7 @@ ${formData.message}
                 rel="noopener noreferrer"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                Studio Location
+                {t('contact.location')}
               </a>
             </div>
           </div>
@@ -138,7 +140,7 @@ ${formData.message}
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="name">Name *</Label>
+                <Label htmlFor="name">{t('contact.name')} *</Label>
                 <Input
                   id="name"
                   name="name"
@@ -149,7 +151,7 @@ ${formData.message}
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="email">Email *</Label>
+                <Label htmlFor="email">{t('contact.email')} *</Label>
                 <Input
                   id="email"
                   name="email"
@@ -164,7 +166,7 @@ ${formData.message}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <Label htmlFor="phone">Phone</Label>
+                <Label htmlFor="phone">{t('contact.phone')}</Label>
                 <Input
                   id="phone"
                   name="phone"
@@ -175,7 +177,7 @@ ${formData.message}
                 />
               </div>
               <div className="space-y-2">
-                <Label htmlFor="service">Service Interest</Label>
+                <Label htmlFor="service">{t('contact.service')}</Label>
                 <select
                   id="service"
                   name="service"
@@ -194,7 +196,7 @@ ${formData.message}
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="message">Message *</Label>
+              <Label htmlFor="message">{t('contact.message')} *</Label>
               <Textarea
                 id="message"
                 name="message"
@@ -214,11 +216,11 @@ ${formData.message}
               disabled={isSubmitting}
             >
               {isSubmitting ? (
-                "Sending..."
+                t('contact.sending')
               ) : (
                 <>
                   <Send size={16} className="mr-2" />
-                  Send Message
+                  {t('contact.send')}
                 </>
               )}
             </Button>

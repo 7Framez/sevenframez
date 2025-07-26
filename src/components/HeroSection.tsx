@@ -1,11 +1,14 @@
 import { Button } from '@/components/ui/button';
 import { Camera } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface HeroSectionProps {
   onContactClick: () => void;
 }
 
 export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
+  const { t } = useLanguage();
+  
   return (
     <section className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
       {/* Background geometric elements */}
@@ -30,7 +33,7 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         <div className="mb-12 animate-fade-in delay-300">
           <h1 className="text-xl md:text-3xl text-muted-foreground flex items-center justify-center gap-3">
             <Camera className="text-primary" size={28} />
-            <span>Where every frame counts</span>
+            <span>{t('hero.title')}</span>
           </h1>
         </div>
 
@@ -43,7 +46,7 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             onClick={() => document.getElementById('showreel')?.scrollIntoView({ behavior: 'smooth' })}
             className="text-lg px-8 py-6"
           >
-            Watch Our Work
+            {t('hero.learn-more')}
           </Button>
           <Button 
             variant="outline-glow" 
@@ -51,14 +54,13 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             onClick={onContactClick}
             className="text-lg px-8 py-6"
           >
-            Get Started
+            {t('hero.cta')}
           </Button>
         </div>
 
         {/* Subtitle */}
         <p className="mt-8 text-muted-foreground max-w-2xl mx-auto animate-fade-in delay-1000">
-          Professional video services and creative rental space for content creators. 
-          From concept to completion, we bring your vision to life.
+          {t('hero.subtitle')}
         </p>
       </div>
 

@@ -1,4 +1,5 @@
 import { Instagram, Youtube, MapPin, Mail, Phone } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 // Custom TikTok icon component
 const TikTokIcon = ({ size = 20, className = "" }) => (
@@ -14,6 +15,7 @@ const TikTokIcon = ({ size = 20, className = "" }) => (
 );
 
 export const Footer = () => {
+  const { t } = useLanguage();
   const socialLinks = [
     {
       name: 'Instagram',
@@ -55,7 +57,7 @@ export const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="text-lg font-semibold text-foreground">Contact Us</h4>
+            <h4 className="text-lg font-semibold text-foreground">{t('nav.contact')}</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail size={16} className="text-primary" />
