@@ -122,7 +122,7 @@ export const Footer = () => {
         {/* Copyright */}
         <div className="mt-8 pt-8 border-t border-border text-center">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} {t('footer.copyright')}
+            {t('footer.copyright', {year: new Date().getFullYear()})}
           </p>
         </div>
       </div>

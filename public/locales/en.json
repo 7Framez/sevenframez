@@ -67,5 +67,5 @@
   "footer.description": "Professional video production, photography, and creative space rental services in Riyadh, Saudi Arabia.",
   "footer.followUs": "Follow Us",
   "footer.stayUpdated": "Stay updated with our latest work and behind-the-scenes content.",
-  "footer.copyright": "7 Framez. All rights reserved."
+  "footer.copyright": "© {{year}} 7 Framez. All rights reserved."
 }
