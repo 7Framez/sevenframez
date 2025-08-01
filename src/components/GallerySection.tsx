@@ -33,7 +33,7 @@ export const GallerySection = () => {
           </p>
         </div>
 
-        {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
           {galleryImages.slice(0, 1).map((imageId, index) => (
             <div 
               key={index}
@@ -50,7 +50,7 @@ export const GallerySection = () => {
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
 
         <div className="text-center">
           <Button 
