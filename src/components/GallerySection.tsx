@@ -34,7 +34,7 @@ export const GallerySection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {galleryImages.slice(0, 6).map((imageId, index) => (
+          {galleryImages.slice(0, 3).map((imageId, index) => (
             <div 
               key={index}
               className="aspect-video bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
