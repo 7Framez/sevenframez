@@ -38,8 +38,11 @@ export const Header = ({ onContactClick }: HeaderProps) => {
             <img 
               src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
               alt="7 Framez Logo"
-              className="h-8 w-auto transition-opacity duration-300"
-              style={{ opacity: logoOpacity }}
+              className="max-w-full h-auto max-h-8 object-contain transition-opacity duration-300"
+              style={{ 
+                opacity: logoOpacity,
+                aspectRatio: 'auto'
+              }}
             />
           </div>
 
