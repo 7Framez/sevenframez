@@ -56,8 +56,14 @@ export const GallerySection = () => {
 
         {/* Gallery Explorer Modal - placeholder for now */}
         {showGalleryExplorer && (
-          <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4">
-            <div className="bg-card rounded-lg p-6 max-w-4xl w-full max-h-[80vh] overflow-auto">
+          <div 
+            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
+            onClick={() => setShowGalleryExplorer(false)}
+          >
+            <div 
+              className="bg-card rounded-lg p-6 max-w-4xl w-full max-h-[80vh] overflow-auto"
+              onClick={(e) => e.stopPropagation()}
+            >
               <div className="flex justify-between items-center mb-6">
                 <h3 className="text-2xl font-bold text-foreground">Gallery Explorer</h3>
                 <Button 
