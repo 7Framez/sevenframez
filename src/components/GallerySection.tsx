@@ -9,7 +9,7 @@ export const GallerySection = () => {
   const galleryImages = [
     "photo-1605810230434-7631ac76ec81",
     "photo-1487958449943-2429e8be8625",
-    "photo-1488972685288-c3fd157d7c7a", 
+     
     "photo-1524230572899-a752b3835840",
     "photo-1493397212122-2b85dda8106b",
     "photo-1466442929976-97f336a657be",
