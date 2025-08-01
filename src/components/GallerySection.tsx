@@ -29,7 +29,14 @@ export const GallerySection = () => {
     "/lovable-uploads/38a7526f-0867-43f2-a828-fb5acd884b77.png",
     "/lovable-uploads/c6226336-d9f1-4422-80e7-be7e6d40033e.png",
     "/lovable-uploads/c67ac28e-e9f7-4607-9f8a-a36fbb78b5a6.png",
-    "/lovable-uploads/25297290-e6ef-47c0-9dff-d65856eae70a.png"
+    "/lovable-uploads/25297290-e6ef-47c0-9dff-d65856eae70a.png",
+    "/lovable-uploads/527e1f6b-609a-4830-b692-60b91ba78c00.png",
+    "/lovable-uploads/6b219920-89e3-41e0-97a8-285bd3771a6e.png",
+    "/lovable-uploads/4503531a-4cf6-442b-b62f-2ad474ed6654.png",
+    "/lovable-uploads/1e68b3dd-38a6-404b-a512-2b0acc4cb261.png",
+    "/lovable-uploads/11be1197-4bb5-4809-bde7-1d2de4bc1862.png",
+    "/lovable-uploads/cc251bfb-bc91-46be-b047-1c2251695d5e.png",
+    "/lovable-uploads/55edab36-ca72-468a-9f3d-aa62f19a6957.png"
   ];
 
   return (
