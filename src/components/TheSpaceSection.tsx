@@ -26,7 +26,17 @@ export const TheSpaceSection = () => {
     "/lovable-uploads/82eeaf36-aee1-4c73-b4f4-87a9fd872a23.png",
     "/lovable-uploads/45820669-2ed8-4c77-8850-3948b780d82a.png",
     "/lovable-uploads/b6fe56a7-a99d-49ee-bdbd-b7b430a10c5f.png",
-    "/lovable-uploads/370b0998-d13d-4181-ade2-9c90cb1f5a60.png"
+    "/lovable-uploads/370b0998-d13d-4181-ade2-9c90cb1f5a60.png",
+    "/lovable-uploads/3a3100ac-116e-420f-b454-981c47ccd74c.png",
+    "/lovable-uploads/bbc1dc2d-2938-4d3a-9ba7-d2bffb372231.png",
+    "/lovable-uploads/aabcb762-cd2f-4d8a-bd31-8b82db01afeb.png",
+    "/lovable-uploads/0bdc677c-2488-475e-9a59-ce6737521e16.png",
+    "/lovable-uploads/9a8ef028-e5ca-4307-acd7-6219ae84f46e.png",
+    "/lovable-uploads/1e3a1599-fb46-4ebe-b123-9a95d45ac933.png",
+    "/lovable-uploads/fe13a4ec-619f-4f06-bff2-c9f89c6a2508.png",
+    "/lovable-uploads/7934a5a1-fd26-4cc0-bb5d-d34c3aaf4332.png",
+    "/lovable-uploads/dba6d9bf-2921-4fd6-b47d-b5960c6c4143.png",
+    "/lovable-uploads/25b2e776-a0a6-434f-a124-67ea5b5141b1.png"
   ];
 
   return (
