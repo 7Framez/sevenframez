@@ -7,16 +7,16 @@ export const TheSpaceSection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const spaceImages = [
-    "photo-1492321936769-b49830bc1d1e",
-    "photo-1721322800607-8c38375eef04",
-    "photo-1605810230434-7631ac76ec81",
-    "photo-1488972685288-c3fd157d7c7a",
-    "photo-1487958449943-2429e8be8625", 
-    "photo-1524230572899-a752b3835840",
-    "photo-1472396961693-142e6e269027",
-    "photo-1469474968028-56623f02e42e",
-    "photo-1581090464777-f3220bbe1b8b",
-    "photo-1500375592092-40eb2168fd21"
+    "/lovable-uploads/7e032dbc-8cb9-4294-8d36-ac81a0cded8f.png",
+    "/lovable-uploads/82048f19-abb4-43dd-ae22-44f075b7b1f9.png",
+    "/lovable-uploads/c8213ace-93c7-4d83-beda-3f862c0cc0f9.png",
+    "/lovable-uploads/859d002e-8c38-4c0c-bd50-572d1482bf23.png",
+    "/lovable-uploads/aabc0aac-be42-42f8-bd8a-24809d4e3435.png",
+    "/lovable-uploads/5c9099e6-01e4-49e2-8810-3ce1c2439e4f.png",
+    "/lovable-uploads/e97f499c-c0bb-4514-83ab-ad0a42c68597.png",
+    "/lovable-uploads/48603990-1faf-4c1a-a24a-fe03d34a13f4.png",
+    "/lovable-uploads/4aba4227-f05f-4c1f-b17d-4714885c482f.png",
+    "/lovable-uploads/8ffd24b8-ec3b-4694-960c-7b278b1fc3a2.png"
   ];
 
   return (
@@ -51,7 +51,7 @@ export const TheSpaceSection = () => {
               onClick={() => setSelectedImage(imageId)}
             >
               <img 
-                src={`https://images.unsplash.com/${imageId}?w=600&h=400&fit=crop`}
+                src={imageId}
                 alt={`Studio space ${index + 1}`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -100,7 +100,7 @@ export const TheSpaceSection = () => {
                     onClick={() => setSelectedImage(imageId)}
                   >
                     <img 
-                      src={`https://images.unsplash.com/${imageId}?w=600&auto=format`}
+                      src={imageId}
                       alt={`Studio space ${index + 1}`}
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -122,7 +122,7 @@ export const TheSpaceSection = () => {
           >
             <div className="relative max-w-[90vw] max-h-[90vh]">
               <img 
-                src={`https://images.unsplash.com/${selectedImage}?w=1200&auto=format`}
+                src={selectedImage}
                 alt="Full size studio space image"
                 className="max-w-full max-h-full object-contain"
                 onClick={(e) => e.stopPropagation()}
