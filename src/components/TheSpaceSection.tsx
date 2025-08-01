@@ -142,11 +142,11 @@ export const TheSpaceSection = () => {
             className="fixed inset-0 bg-black/95 z-[60] flex items-center justify-center p-4"
             onClick={() => setSelectedImage(null)}
           >
-            <div className="relative max-w-[90vw] max-h-[90vh]">
+            <div className="relative w-full h-full flex items-center justify-center">
               <img 
                 src={selectedImage}
                 alt="Full size studio space image"
-                className="max-w-full max-h-full object-contain"
+                className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain"
                 onClick={(e) => e.stopPropagation()}
               />
               <Button 
