@@ -66,10 +66,10 @@ export const TheSpaceSection = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {spaceImages.slice(0, 6).map((imageId, index) => (
+          {spaceImages.slice(0, 3).map((imageId, index) => (
             <div 
               key={index}
-              className="aspect-video bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
+              className="aspect-[3/4] bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
               onClick={() => setSelectedImage(imageId)}
             >
               <img 
