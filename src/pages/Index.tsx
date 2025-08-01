@@ -17,8 +17,8 @@ const Index = () => {
       <HeroSection onContactClick={() => setIsContactOpen(true)} />
       <ServicesSection />
       <ShowreelSection />
-      {/* <GallerySection />
-      <TheSpaceSection /> */}
+      <GallerySection />
+      <TheSpaceSection /> 
       
       <Footer />
       
