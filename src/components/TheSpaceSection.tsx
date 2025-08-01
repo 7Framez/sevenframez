@@ -8,8 +8,8 @@ export const TheSpaceSection = () => {
 
   const spaceImages = [
     "/lovable-uploads/02c742fb-c825-4cc8-8f2b-81481571fc94.png",
-    "/lovable-uploads/21fe3b97-2275-40e9-a6fb-8877d82b14e6.png",
     "/lovable-uploads/f16590bb-b67c-4ed5-b12b-abddf7eb8bc1.png",
+    "/lovable-uploads/21fe3b97-2275-40e9-a6fb-8877d82b14e6.png",
     "/lovable-uploads/859d002e-8c38-4c0c-bd50-572d1482bf23.png",
     "/lovable-uploads/aabc0aac-be42-42f8-bd8a-24809d4e3435.png",
     "/lovable-uploads/5c9099e6-01e4-49e2-8810-3ce1c2439e4f.png",
