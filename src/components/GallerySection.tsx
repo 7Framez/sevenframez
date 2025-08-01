@@ -9,18 +9,9 @@ export const GallerySection = () => {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const galleryImages = [
-    "photo-1487958449943-2429e8be8625",
-    "photo-1488972685288-c3fd157d7c7a",
-    "photo-1493397212122-2b85dda8106b", 
-    "photo-1524230572899-a752b3835840",
-    "photo-1605810230434-7631ac76ec81",
-    "photo-1466442929976-97f336a657be",
-    "photo-1472396961693-142e6e269027",
-    "photo-1469474968028-56623f02e42e",
-    "photo-1581090464777-f3220bbe1b8b",
-    "photo-1500375592092-40eb2168fd21",
-    "photo-1535268647677-3057x4585",
-    "photo-1488590528505-98d2b5aba04b"
+    "/lovable-uploads/b6b31e8c-75b5-4497-843b-f3c04259b061.png",
+    "/lovable-uploads/6e057cf3-ff32-48d0-84bd-a377aa124ab4.png",
+    "/lovable-uploads/1d103c29-15fa-46cf-a448-4f95a7ba5bb5.png"
   ];
 
   return (
@@ -39,11 +30,11 @@ export const GallerySection = () => {
           {galleryImages.slice(0, 3).map((imageId, index) => (
             <div 
               key={index}
-              className="aspect-[3/4] bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
+              className="aspect-[4/3] bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
               onClick={() => setSelectedImage(imageId)}
             >
               <img 
-                src={`https://images.unsplash.com/${imageId}?w=600&h=400&fit=crop`}
+                src={imageId}
                 alt={`Gallery image ${index + 1}`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
               />
@@ -92,7 +83,7 @@ export const GallerySection = () => {
                     onClick={() => setSelectedImage(imageId)}
                   >
                     <img 
-                      src={`https://images.unsplash.com/${imageId}?w=600&auto=format`}
+                      src={imageId}
                       alt={`Gallery image ${index + 1}`}
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
                     />
@@ -114,7 +105,7 @@ export const GallerySection = () => {
           >
             <div className="relative max-w-[90vw] max-h-[90vh]">
               <img 
-                src={`https://images.unsplash.com/${selectedImage}?w=1200&auto=format`}
+                src={selectedImage}
                 alt="Full size gallery image"
                 className="max-w-full max-h-full object-contain"
                 onClick={(e) => e.stopPropagation()}
