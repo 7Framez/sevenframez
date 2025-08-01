@@ -36,7 +36,9 @@ export const TheSpaceSection = () => {
     "/lovable-uploads/fe13a4ec-619f-4f06-bff2-c9f89c6a2508.png",
     "/lovable-uploads/7934a5a1-fd26-4cc0-bb5d-d34c3aaf4332.png",
     "/lovable-uploads/dba6d9bf-2921-4fd6-b47d-b5960c6c4143.png",
-    "/lovable-uploads/25b2e776-a0a6-434f-a124-67ea5b5141b1.png"
+    "/lovable-uploads/25b2e776-a0a6-434f-a124-67ea5b5141b1.png",
+    "/lovable-uploads/8d56bfae-8a8f-44ec-a043-277e540cca21.png",
+    "/lovable-uploads/50da9a2e-ddfc-44bd-ace3-df50342f49de.png"
   ];
 
   return (
