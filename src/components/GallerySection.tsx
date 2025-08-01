@@ -3,12 +3,22 @@ import { Button } from '@/components/ui/button';
 import { Eye } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 
+// Utility function to shuffle array
+const shuffleArray = <T,>(array: T[]): T[] => {
+  const shuffled = [...array];
+  for (let i = shuffled.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+  }
+  return shuffled;
+};
+
 export const GallerySection = () => {
   const { t } = useLanguage();
   const [showGalleryExplorer, setShowGalleryExplorer] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
-  const galleryImages = [
+  const baseImages = [
     "/lovable-uploads/b6b31e8c-75b5-4497-843b-f3c04259b061.png",
     "/lovable-uploads/6e057cf3-ff32-48d0-84bd-a377aa124ab4.png",
     "/lovable-uploads/1d103c29-15fa-46cf-a448-4f95a7ba5bb5.png",
@@ -51,6 +61,12 @@ export const GallerySection = () => {
     "/lovable-uploads/6bcee392-f431-44fd-a467-12b863fb9b00.png",
     "/lovable-uploads/81149ffe-c947-4f0c-b3b1-2c5f47f70d7d.png",
     "/lovable-uploads/98674455-c1fe-459e-9ad2-d45f6673f644.png"
+  ];
+
+  // Keep first 3 images fixed, shuffle the rest
+  const galleryImages = [
+    ...baseImages.slice(0, 3), // First 3 images stay fixed
+    ...shuffleArray(baseImages.slice(3)) // Shuffle the rest
   ];
 
   return (
