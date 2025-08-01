@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Eye } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const GallerySection = () => {
+  const { t } = useLanguage();
   const [showGalleryExplorer, setShowGalleryExplorer] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -26,18 +28,18 @@ export const GallerySection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Gallery
+            {t('gallery.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore our visual portfolio and see the creativity we bring to every project.
+            {t('gallery.subtitle')}
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-          {galleryImages.slice(0, 1).map((imageId, index) => (
+          {galleryImages.slice(0, 3).map((imageId, index) => (
             <div 
               key={index}
-              className="aspect-video bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
+              className="aspect-[3/4] bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
               onClick={() => setSelectedImage(imageId)}
             >
               <img 
@@ -58,7 +60,7 @@ export const GallerySection = () => {
             onClick={() => setShowGalleryExplorer(true)}
             className="px-8 py-3"
           >
-            Show All
+            {t('gallery.showAll')}
           </Button>
         </div>
 

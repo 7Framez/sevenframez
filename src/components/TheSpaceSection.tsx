@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Eye, MapPin } from 'lucide-react';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 export const TheSpaceSection = () => {
+  const { t } = useLanguage();
   const [showSpaceExplorer, setShowSpaceExplorer] = useState(false);
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -46,11 +48,10 @@ export const TheSpaceSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-foreground mb-4">
-            The Space
+            {t('space.title')}
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Our professional studio space available for rent. Fully equipped with modern amenities 
-            for photography, video production, and creative projects.
+            {t('space.subtitle')}
           </p>
           <div className="flex items-center justify-center gap-2 mt-4">
             <MapPin className="text-primary" size={20} />
@@ -90,7 +91,7 @@ export const TheSpaceSection = () => {
             onClick={() => setShowSpaceExplorer(true)}
             className="px-8 py-3"
           >
-            View All
+            {t('space.showAll')}
           </Button>
         </div>
 
