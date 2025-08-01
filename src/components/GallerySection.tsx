@@ -36,7 +36,17 @@ export const GallerySection = () => {
     "/lovable-uploads/1e68b3dd-38a6-404b-a512-2b0acc4cb261.png",
     "/lovable-uploads/11be1197-4bb5-4809-bde7-1d2de4bc1862.png",
     "/lovable-uploads/cc251bfb-bc91-46be-b047-1c2251695d5e.png",
-    "/lovable-uploads/55edab36-ca72-468a-9f3d-aa62f19a6957.png"
+    "/lovable-uploads/55edab36-ca72-468a-9f3d-aa62f19a6957.png",
+    "/lovable-uploads/0e3e8447-5f13-44d0-8f73-af7c2b1bbd62.png",
+    "/lovable-uploads/d4573546-951b-465c-85f5-1929e6707aa7.png",
+    "/lovable-uploads/76f2e424-c592-405e-b601-8914bca3bdbc.png",
+    "/lovable-uploads/e10b87df-cb90-433c-92b3-96a916600dee.png",
+    "/lovable-uploads/ec3ca77b-5faf-49c1-98ef-e6d18e3be471.png",
+    "/lovable-uploads/26bcf040-3e5e-4263-9c08-0c1966cf96d1.png",
+    "/lovable-uploads/77121a39-247c-46ba-a190-567d22350444.png",
+    "/lovable-uploads/88c59993-b2a6-467d-b622-d54cb910d525.png",
+    "/lovable-uploads/4e898d9a-d185-42b3-8789-13055bc52993.png",
+    "/lovable-uploads/07d147b2-c35a-4c7c-9335-4f92bdcc672e.png"
   ];
 
   return (
