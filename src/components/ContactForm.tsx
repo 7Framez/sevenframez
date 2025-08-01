@@ -15,7 +15,7 @@ interface ContactFormProps {
 
 export const ContactForm = ({ isOpen, onClose }: ContactFormProps) => {
   const { toast } = useToast();
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -103,7 +103,7 @@ ${formData.message}
         <CardContent className="space-y-6">
           {/* Contact Info */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-6 p-4 bg-muted/20 rounded-lg">
-            <div className="flex items-center space-x-2">
+            <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-2'}`}>
               <Mail className="text-primary" size={16} />
               <a 
                 href="mailto:info@7framez.com"
@@ -112,7 +112,7 @@ ${formData.message}
                 info@7framez.com
               </a>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-2'}`}>
               <Phone className="text-primary" size={16} />
               <a 
                 href="https://wa.me/966591918986"
@@ -123,7 +123,7 @@ ${formData.message}
                 +966 591918986
               </a>
             </div>
-            <div className="flex items-center space-x-2">
+            <div className={`flex items-center ${language === 'ar' ? 'space-x-reverse space-x-3' : 'space-x-2'}`}>
               <MapPin className="text-primary" size={16} />
               <a 
                 href="https://maps.app.goo.gl/tD73u41VxkLwoB8z7" 
@@ -205,7 +205,7 @@ ${formData.message}
                 required
                 rows={5}
                 className="bg-background/50"
-                placeholder="Tell us about your project, timeline, and any specific requirements..."
+                placeholder={t('contact.messagePlaceholder')}
               />
             </div>
 
