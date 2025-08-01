@@ -74,7 +74,7 @@ const Links = () => {
             <img 
               src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
               alt="7 Framez Logo"
-              className="h-16 w-auto"
+              className="h-12 w-auto"
             />
           </div>
           <p className="text-muted-foreground">

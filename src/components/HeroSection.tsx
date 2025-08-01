@@ -24,7 +24,7 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
             <img 
               src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
               alt="7 Framez Logo"
-              className="h-32 md:h-48 w-auto filter drop-shadow-glow"
+              className="h-20 md:h-48 w-auto filter drop-shadow-glow"
             />
           </div>
         </div>
