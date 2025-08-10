@@ -65,8 +65,7 @@ export const GallerySection = () => {
   // Keep first 3 images fixed, shuffle the rest
   const galleryImages = [
     ...baseImages.slice(0, 3), // First 3 images stay fixed
-    ...baseImages.slice(3)
-    // ...shuffleArray(baseImages.slice(3)) // Shuffle the rest
+    ...shuffleArray(baseImages.slice(3)) // Shuffle the rest
   ];
 
   return (
