@@ -26,7 +26,6 @@ export const GallerySection = () => {
     "/lovable-uploads/a728f3f6-0b90-40ee-bd20-6f6263eaabcb.png",
     "/lovable-uploads/7e333faa-c169-47cf-9689-8f859cac813e.png",
     "/lovable-uploads/c8a7afbc-bae1-418f-a95e-3c261fe17a66.png",
-    "/lovable-uploads/bfffd539-74fb-43e5-8ea2-497ca22d8c2a.png",
     "/lovable-uploads/4bb8315d-fc5e-4337-bab9-67e762b28278.png",
     "/lovable-uploads/68412e0a-79b7-4cc3-a6d4-5edd5b4a700c.png",
     "/lovable-uploads/1eea3249-5a12-41c0-a86c-f480cfcf581c.png",
