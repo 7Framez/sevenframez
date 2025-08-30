@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Instagram, Youtube, MapPin, MessageCircle, Mail } from 'lucide-react';
 import { ContactForm } from '@/components/ContactForm';
+import { OptimizedImage } from '@/components/OptimizedImage';
 
 // Custom TikTok icon component
 const TikTokIcon = ({ size = 24, className = "" }) => (
@@ -71,10 +72,11 @@ const Links = () => {
         {/* Logo/Header */}
         <div className="text-center space-y-4">
           <div className="flex justify-center mb-6">
-            <img 
+            <OptimizedImage 
               src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
               alt="7 Framez Logo"
               className="h-12 w-auto"
+              loading="eager"
             />
           </div>
           <p className="text-muted-foreground">

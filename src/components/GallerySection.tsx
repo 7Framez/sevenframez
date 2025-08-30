@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Eye } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { OptimizedImage } from './OptimizedImage';
 
 // Utility function to shuffle array
 const shuffleArray = <T,>(array: T[]): T[] => {
@@ -87,7 +88,7 @@ export const GallerySection = () => {
               className="aspect-[4/3] bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
               onClick={() => setSelectedImage(imageId)}
             >
-              <img 
+              <OptimizedImage 
                 src={imageId}
                 alt={`Gallery image ${index + 1}`}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
@@ -136,7 +137,7 @@ export const GallerySection = () => {
                     className="break-inside-avoid cursor-pointer group relative rounded-lg overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-300"
                     onClick={() => setSelectedImage(imageId)}
                   >
-                    <img 
+                    <OptimizedImage 
                       src={imageId}
                       alt={`Gallery image ${index + 1}`}
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
@@ -158,11 +159,11 @@ export const GallerySection = () => {
             onClick={() => setSelectedImage(null)}
           >
             <div className="relative max-w-[90vw] max-h-[90vh]">
-              <img 
+              <OptimizedImage 
                 src={selectedImage}
                 alt="Full size gallery image"
                 className="max-w-full max-h-full object-contain"
-                onClick={(e) => e.stopPropagation()}
+                loading="eager"
               />
               <Button 
                 variant="ghost" 

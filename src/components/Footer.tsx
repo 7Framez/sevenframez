@@ -1,5 +1,6 @@
 import { Instagram, Youtube, MapPin, Mail, Phone } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { OptimizedImage } from './OptimizedImage';
 
 // Custom TikTok icon component
 const TikTokIcon = ({ size = 20, className = "" }) => (
@@ -44,7 +45,7 @@ export const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <div className="flex items-center">
-              <img 
+              <OptimizedImage 
                 src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
                 alt="7 Framez Logo"
                 className="h-8 w-auto"

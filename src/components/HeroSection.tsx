@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Camera } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { OptimizedImage } from './OptimizedImage';
 
 interface HeroSectionProps {
   onContactClick: () => void;
@@ -21,10 +22,11 @@ export const HeroSection = ({ onContactClick }: HeroSectionProps) => {
         {/* Main Logo */}
         <div className="mb-8 animate-fade-in">
           <div className="flex justify-center p-8">
-            <img 
+            <OptimizedImage 
               src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
               alt="7 Framez Logo"
               className="h-20 md:h-48 w-auto filter drop-shadow-glow"
+              loading="eager"
             />
           </div>
         </div>

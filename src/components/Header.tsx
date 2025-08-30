@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
 import { LanguageSwitch } from '@/components/LanguageSwitch';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { OptimizedImage } from './OptimizedImage';
 
 interface HeaderProps {
   onContactClick: () => void;
@@ -35,15 +36,14 @@ export const Header = ({ onContactClick }: HeaderProps) => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <img 
-              src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
-              alt="7 Framez Logo"
-              className="max-w-full h-auto max-h-8 object-contain transition-opacity duration-300"
-              style={{ 
-                opacity: logoOpacity,
-                aspectRatio: 'auto'
-              }}
-            />
+            <div style={{ opacity: logoOpacity }}>
+              <OptimizedImage 
+                src="/lovable-uploads/27031328-c035-4f94-a277-67bdd3dbccbd.png" 
+                alt="7 Framez Logo"
+                className="max-w-full h-auto max-h-8 object-contain transition-opacity duration-300"
+                loading="eager"
+              />
+            </div>
           </div>
 
           {/* Desktop Navigation */}

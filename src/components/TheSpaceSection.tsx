@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Eye, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { OptimizedImage } from './OptimizedImage';
 
 export const TheSpaceSection = () => {
   const { t } = useLanguage();
@@ -73,7 +74,7 @@ export const TheSpaceSection = () => {
               className="aspect-[3/4] bg-card rounded-lg overflow-hidden group cursor-pointer relative shadow-elegant hover:shadow-glow transition-all duration-300"
               onClick={() => setSelectedImage(imageId)}
             >
-              <img 
+              <OptimizedImage 
                 src={imageId}
                 alt={`Studio space ${index + 1}`}
                 className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-300"
@@ -122,7 +123,7 @@ export const TheSpaceSection = () => {
                     className="break-inside-avoid cursor-pointer group relative rounded-lg overflow-hidden shadow-elegant hover:shadow-glow transition-all duration-300"
                     onClick={() => setSelectedImage(imageId)}
                   >
-                    <img 
+                    <OptimizedImage 
                       src={imageId}
                       alt={`Studio space ${index + 1}`}
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-300"
@@ -144,11 +145,11 @@ export const TheSpaceSection = () => {
             onClick={() => setSelectedImage(null)}
           >
             <div className="relative w-full h-full flex items-center justify-center">
-              <img 
+              <OptimizedImage 
                 src={selectedImage}
                 alt="Full size studio space image"
                 className="max-w-[90vw] max-h-[90vh] w-auto h-auto object-contain"
-                onClick={(e) => e.stopPropagation()}
+                loading="eager"
               />
               <Button 
                 variant="ghost" 
